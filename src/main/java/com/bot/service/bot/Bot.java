@@ -48,20 +48,20 @@ public class Bot extends TelegramLongPollingBot {
 		        }
 	}
 	public void botConnect() {
-        TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
-        try {
-            telegramBotsApi.registerBot(this);
-            log.info("TelegramAPI started. Look for messages");
-        } catch (TelegramApiRequestException e) {
-            log.error("Cant Connect. Pause " + RECONNECT_PAUSE / 1000 + "sec and try again. Error: " + e.getMessage());
-            try {
-                Thread.sleep(RECONNECT_PAUSE);
-            } catch (InterruptedException e1) {
-                e1.printStackTrace();
-                return;
-            }
-            botConnect();
-        }
+//        TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
+//        try {
+//            telegramBotsApi.registerBot(this);
+//            log.info("TelegramAPI started. Look for messages");
+//        } catch (TelegramApiRequestException e) {
+//            log.error("Cant Connect. Pause " + RECONNECT_PAUSE / 1000 + "sec and try again. Error: " + e.getMessage());
+//            try {
+//                Thread.sleep(RECONNECT_PAUSE);
+//            } catch (InterruptedException e1) {
+//                e1.printStackTrace();
+//                return;
+//            }
+//            botConnect();
+//        }
     }
 
 }
